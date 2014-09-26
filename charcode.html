@@ -1,0 +1,30 @@
+<meta charset="utf-8"></meta>
+<body>
+<form>
+  <input id="target" type="text" />
+</form>
+
+<script src="js/jq.js"></script>
+<script>
+  $("#target").keyup(function(event) {
+    var charCode = event.keyCode; // charCode will contain the code of the character inputted
+
+    var theChar = String.fromCharCode(charCode).toLowerCase(); // 
+    var theCharD = String.fromCharCode(charCode).toUpperCase(); // theChar will contain the actual character
+    console.log(theChar)
+    console.log(theCharD)
+    if(theChar==="d"){
+
+        
+        $(this).val($(this).val().replace(/d/ig,"")+"ي");
+
+     }
+     if(theCharD==="D"){
+
+        
+        $(this).val($(this).val().replace(/D/ig,"")+"ژ");
+
+     }
+  });
+</script>
+</body>

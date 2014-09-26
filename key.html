@@ -1,0 +1,26 @@
+<script type="text/javascript">
+
+window.addEventListener("keyup", keysPressed, false);
+
+ 
+var keys = [];
+ 
+function keysPressed(e) {
+    // store an entry for every key pressed
+    keys[e.keyCode] = true;
+     
+    // Ctrl + Shift + 5
+    console.log(keys);
+    if (keys[16] && keys[53]) {
+        alert(1);
+    }
+     
+    // Ctrl + f
+    if (keys[17] && keys[70]) {
+        // do something
+     
+        // prevent default browser behavior
+        e.preventDefault(); 
+    }
+}
+</script>
